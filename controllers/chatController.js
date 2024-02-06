@@ -92,7 +92,7 @@ module.exports={
     }
     },
 
-    //set read message
+    //update read message
     updateLu:(req,res)=>{
         const id_user=req.headers.id_user;
         const updateLu="UPDATE message SET lu=true WHERE id_conv IN (SELECT id_conv FROM conversation WHERE user1=? OR user2=?);";
